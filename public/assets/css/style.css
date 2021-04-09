@@ -1,0 +1,50 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto";
+}
+
+@font-face {
+    font-family: "Train One";
+    src: url("../font/TrainOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto-Regular.ttf")
+}
+
+body {
+    background-image: url("../img/abstract-luxury-clear-yellow-wall-well-use-as-backdrop-background-layout (1).jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+}
+
+.contact-title{
+    font-family: "Train One";
+    font-size: 3em;
+    padding: 30px;
+}
+
+.container-title {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 210px;
+}
+
+.p-contact {
+    font-size: 20px;
+    line-height: 1.5px;
+}
+
+
+

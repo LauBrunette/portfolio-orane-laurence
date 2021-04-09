@@ -1,0 +1,74 @@
+{% extends 'home.html.twig' %}
+
+{% block main %}
+    <div class="container-fluid container-title">
+        <div class="row">
+            <div>
+                <h1 class="d-flex justify-content-center contact-title">Formulaire de contact</h1>
+                <p class="d-flex justify-content-center p-contact"><b>Dites-nous tout, vos peurs, vos angoisses, vos joies.</b></p>
+                <p class="d-flex justify-content-center p-contact"><b>Si vous voulez nous poser des questions c'est encore mieux!</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        {{ form_start(contactFormView) }}
+
+        <div class="firstname-form-contact row pt-4">
+            {{ form_errors(contactFormView.firstname) }}
+            <div class="col-6 d-flex justify-content-end pt-4">
+                {{ form_label(contactFormView.firstname, 'Prénom', {'label_attr': {'class': 'test'}}) }}
+            </div>
+            <div class="col-6 d-flex justify-content-start pt-4">
+                {{ form_widget(contactFormView.firstname, {'attr': {'class': 'test'}}) }}
+            </div>
+        </div>
+
+        <div class="name-form-contact row">
+            {{ form_errors(contactFormView.name) }}
+            <div class="col-6 d-flex justify-content-end pt-4">
+                {{ form_label(contactFormView.name, 'Nom', {'label_attr': {'class': 'test'}}) }}
+            </div>
+            <div class="col-6 d-flex justify-content-start pt-4">
+                {{ form_widget(contactFormView.name, {'attr': {'class': 'test'}}) }}
+            </div>
+        </div>
+
+        <div class="phone-form-contact row">
+            {{ form_errors(contactFormView.phone) }}
+            <div class="col-6 d-flex justify-content-end pt-4">
+                {{ form_label(contactFormView.phone, 'Numéro de téléphone', {'label_attr': {'class': 'test'}}) }}
+            </div>
+            <div class="col-6 d-flex justify-content-start pt-4">
+                {{ form_widget(contactFormView.phone, {'attr': {'class': 'test'}}) }}
+            </div>
+        </div>
+
+        <div class="email-form-contact row">
+            {{ form_errors(contactFormView.email) }}
+            <div class="col-6 d-flex justify-content-end pt-5">
+                {{ form_label(contactFormView.email, 'Adresse mail', {'label_attr': {'class': 'test'}}) }}
+            </div>
+            <div class="col-6 d-flex justify-content-start pt-5">
+                {{ form_widget(contactFormView.email, {'attr': {'class': 'test'}}) }}
+            </div>
+        </div>
+
+        <div class="message-form-contact row">
+            {{ form_errors(contactFormView.message) }}
+            <div class="col-6 d-flex justify-content-end pt-5">
+                {{ form_label(contactFormView.message, 'Votre message', {'label_attr': {'class': 'test'}}) }}
+            </div>
+            <div class="col-6 d-flex justify-content-start pt-5">
+                {{ form_widget(contactFormView.message, {'attr': {'class': 'test'}}) }}
+            </div>
+        </div>
+
+        <div class="button-contact row justify-content-center">
+            <button type="submit" class="col-3 btn btn-outline-dark my-5">Envoyer le formulaire</button>
+        </div>
+
+        {{ form_end(contactFormView) }}
+    </div>
+
+{% endblock %}
